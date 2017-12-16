@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="p8J-TE-9dg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="eli-RP-5gZ">
+            <objects>
+                <navigationController storyboardIdentifier="vc" id="p8J-TE-9dg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NLf-Uh-2UU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ywR-Yr-4cq" kind="relationship" relationship="rootViewController" id="N4L-Ix-TXK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ktj-O1-hav" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-401" y="220"/>
+        </scene>
+        <!--SunQR View Controller-->
+        <scene sceneID="Izy-oU-Lm3">
+            <objects>
+                <viewController id="ywR-Yr-4cq" customClass="SunQRViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAh-mp-Be7"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiH-ck-MpN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ge-Yy-ab9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-cz-Vl5">
+                                <rect key="frame" x="0.0" y="618" width="600" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMU-W1-85p">
+                                        <rect key="frame" x="38" y="11" width="59" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="开灯">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openLight:" destination="ywR-Yr-4cq" eventType="touchUpInside" id="a01-AC-Zzi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="1p6-kp-jau"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZSX-cz-Vl5" secondAttribute="bottom" id="BUk-m2-h6h"/>
+                            <constraint firstAttribute="trailing" secondItem="ZSX-cz-Vl5" secondAttribute="trailing" constant="-225" id="XmF-Gg-E3S"/>
+                            <constraint firstItem="ZSX-cz-Vl5" firstAttribute="leading" secondItem="1ge-Yy-ab9" secondAttribute="leading" id="kbC-rK-8ic"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dmj-1x-cyC">
+                        <barButtonItem key="leftBarButtonItem" title="关闭" id="Cjr-aZ-bvW">
+                            <connections>
+                                <action selector="qrClose:" destination="ywR-Yr-4cq" id="wNq-Tq-AZt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2o1-7t-LUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="220"/>
+        </scene>
+    </scenes>
+</document>
