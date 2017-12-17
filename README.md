@@ -1,4 +1,6 @@
 # HealthManager
+# 前提
+>>>项目中使用环信SDK，framework库 141M，gitHub限制单体文件最大100M，所以clone这个项目时，不添加静态库，编译会报错，我已经传到百度网盘中地址:https://pan.baidu.com/s/1hrC64Na  解压拖拽到文件夹 Other->Lib->HyphenateFullSDK目录，编译success！
 # 项目描述
 >>该项目融合两种用户类型，一种是医生身份登录，一种是普通用户（患者）
 >>> (0)项目中分为（患者）首页，数据，管组，我的四个模块
